@@ -9,8 +9,8 @@ import org.springframework.web.client.RestTemplate;
 public class DemoApplication {
 
 	@Bean
-	public void getTemplate(RestTemplate restTemplate){
-		restTemplate=new RestTemplate();
+	public RestTemplate getTemplate(){
+		return new RestTemplate();
 	}
 
 	public static void main(String[] args) {
