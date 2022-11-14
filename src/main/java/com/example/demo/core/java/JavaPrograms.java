@@ -1,5 +1,9 @@
 package com.example.demo.core.java;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class JavaPrograms {
@@ -51,6 +55,13 @@ public class JavaPrograms {
         Car cloneVehicle = (Car) cloneable.clone();
         System.out.println(cloneVehicle.toString());
 */
+
+       /* String s1 = "foobar";
+        String s2 = "foobar";
+        System.out.println(s1 == s2);      // true
+        s2 = new String("foobar");
+        System.out.println(s1 == s2);      // false
+        System.out.println(s1.equals(s2)); // true*/
 
     }
 
