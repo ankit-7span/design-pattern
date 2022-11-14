@@ -6,7 +6,7 @@ public class BikePrototype extends Vehicle {
     }
 
     public BikePrototype(BikePrototype bikeBluePrint){
-        super(bikeBluePrint);
+            super(bikeBluePrint);
     }
 
     @Override

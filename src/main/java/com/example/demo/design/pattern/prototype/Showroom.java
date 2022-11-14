@@ -17,7 +17,7 @@ public class Showroom {
         bike.setTyres(2);
         bike.setSeats(2);
 
-        Vehicle cloneable = new Vehicle(car);
+        Vehicle cloneable = new Vehicle(bike);
 
         Vehicle cloneVehicle = (Vehicle) cloneable.clone();
         System.out.println("First "+cloneVehicle.toString());
