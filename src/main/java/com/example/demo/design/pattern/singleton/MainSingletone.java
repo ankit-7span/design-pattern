@@ -4,7 +4,7 @@ public class MainSingletone {
     public static void main(String[] args) {
         LazySingletone instance = LazySingletone.getInstance();
         LazySingletone instance2 = LazySingletone.getInstance();
-        System.out.println("First Instance "+instance.hashCode()+" \nSecond Instance "+instance2.hashCode());
+        System.out.println("First Instance "+instance.getI()+" \nSecond Instance "+instance2.getI());
 
         System.out.println("-----------------------------------------------------------");
         ChocolateBoiler instance1 = ChocolateBoiler.getInstance();
