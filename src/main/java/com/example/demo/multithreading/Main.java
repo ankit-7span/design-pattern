@@ -1,8 +1,5 @@
 package com.example.demo.multithreading;
 
-
-import java.util.Date;
-
 class A implements Runnable {
 
     @Override
@@ -19,7 +16,7 @@ class A implements Runnable {
 public class Main {
     public static void main(String[] args) {
         for (int i = 0; i < 8; i++) {
-            Thread a = new Thread(new A());
+            Thread a=new Thread(new A());
             a.start();
         }
 

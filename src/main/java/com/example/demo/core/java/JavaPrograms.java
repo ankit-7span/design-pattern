@@ -1,9 +1,5 @@
 package com.example.demo.core.java;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
 import java.util.regex.Pattern;
 
 public class JavaPrograms {
@@ -12,9 +8,9 @@ public class JavaPrograms {
         String panNumber=CustomConstant.PAN;
         boolean panMatches=validatePan(panNumber);
         if (panMatches){
-            System.out.println(CustomConstant.MSG_PAN_MATCHED);
+            System.out.println(CustomConstant.MSG_PAN_CORRECT);
         }else {
-            System.out.println(CustomConstant.MSG_PAN_NOT_MATCHED);
+            System.out.println(CustomConstant.MSG_PAN_NOT_CORRECT);
         }
 
         //code riddle 1
