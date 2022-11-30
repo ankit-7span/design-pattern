@@ -1,4 +1,4 @@
-package com.example.demo.design.pattern.factory;
+package com.example.demo.design.pattern.creational.factory;
 
 public class Rupee implements Currency{
     @Override

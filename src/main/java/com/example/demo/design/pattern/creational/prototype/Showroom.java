@@ -1,4 +1,4 @@
-package com.example.demo.design.pattern.prototype;
+package com.example.demo.design.pattern.creational.prototype;
 
 public class Showroom {
 
