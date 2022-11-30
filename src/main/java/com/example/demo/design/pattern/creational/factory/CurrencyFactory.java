@@ -1,6 +1,4 @@
-package com.example.demo.design.pattern.factory;
-
-import org.apache.logging.log4j.LogManager;
+package com.example.demo.design.pattern.creational.factory;
 
 class CurrencyFactory {
 

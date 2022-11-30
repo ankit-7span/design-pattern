@@ -1,4 +1,4 @@
-package com.example.demo.design.pattern.singleton;
+package com.example.demo.design.pattern.creational.singleton;
 
 public class LazySingletone {
     // private instance, so that it can be

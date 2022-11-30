@@ -1,4 +1,4 @@
-package com.example.demo.design.pattern.builder;
+package com.example.demo.design.pattern.creational.builder;
 
 public class BuilderPattern {
     static class Coffee {
