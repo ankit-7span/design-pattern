@@ -1,10 +1,62 @@
 package com.example.demo.core.java;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 public class JavaPrograms {
 
+    static void charFrequency() {
+        String s = "Helooo";
+        ArrayList<Character> chars = new ArrayList<>();
+        char c = s.charAt(0);
+        int count=0;
+        for(int index=0; index<s.length(); index++) {
+            if(!chars.contains(s.charAt(index))) {
+                chars.add(s.charAt(index));
+                int counter = 1;
+
+                for(int sub=index+1; sub<s.length(); sub++) {
+                    if(s.charAt(index) != s.charAt(sub))
+                        break;
+                    counter++;
+                }
+                if (counter>count){
+                    count=counter;
+                    c=s.charAt(index);
+                }
+            }
+        }
+        System.out.println(c + " : " + count);
+    }
+
+    static void eachCharOccurrance(){
+        String test="AAnkittt";
+
+        Map<Character,Integer> characterIntegerHashMap=new HashMap<>();
+
+        char[] chars = test.toCharArray();
+
+        for (char aChar : chars) {
+            if (characterIntegerHashMap.containsKey(aChar)){
+                Integer integer = characterIntegerHashMap.get(aChar);
+                characterIntegerHashMap.put(aChar,++integer);
+            }else {
+                characterIntegerHashMap.put(aChar,1);
+            }
+        }
+
+
+        System.out.println(characterIntegerHashMap);
+    }
+
     public static void main(String[] args) {
+
+        charFrequency();
+
+        eachCharOccurrance();
+
         String panNumber=CustomConstant.PAN;
         boolean panMatches=validatePan(panNumber);
         if (panMatches){
