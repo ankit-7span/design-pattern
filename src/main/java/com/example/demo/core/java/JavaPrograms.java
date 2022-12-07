@@ -11,57 +11,49 @@ public class JavaPrograms {
         String s = "Helooo";
         ArrayList<Character> chars = new ArrayList<>();
         char c = s.charAt(0);
-        int count=0;
-        for(int index=0; index<s.length(); index++) {
-            if(!chars.contains(s.charAt(index))) {
+        int count = 0;
+        for (int index = 0; index < s.length(); index++) {
+            if (!chars.contains(s.charAt(index))) {
                 chars.add(s.charAt(index));
                 int counter = 1;
-
-                for(int sub=index+1; sub<s.length(); sub++) {
-                    if(s.charAt(index) != s.charAt(sub))
+                for (int sub = index + 1; sub < s.length(); sub++) {
+                    if (s.charAt(index) != s.charAt(sub))
                         break;
                     counter++;
                 }
-                if (counter>count){
-                    count=counter;
-                    c=s.charAt(index);
+                if (counter > count) {
+                    count = counter;
+                    c = s.charAt(index);
                 }
             }
         }
         System.out.println(c + " : " + count);
     }
 
-    static void eachCharOccurrance(){
-        String test="AAnkittt";
-
-        Map<Character,Integer> characterIntegerHashMap=new HashMap<>();
-
+    static void eachCharOccurrance() {
+        String test = "AAnkittt";
+        Map<Character, Integer> characterIntegerHashMap = new HashMap<>();
         char[] chars = test.toCharArray();
-
         for (char aChar : chars) {
-            if (characterIntegerHashMap.containsKey(aChar)){
+            if (characterIntegerHashMap.containsKey(aChar)) {
                 Integer integer = characterIntegerHashMap.get(aChar);
-                characterIntegerHashMap.put(aChar,++integer);
-            }else {
-                characterIntegerHashMap.put(aChar,1);
+                characterIntegerHashMap.put(aChar, ++integer);
+            } else {
+                characterIntegerHashMap.put(aChar, 1);
             }
         }
-
-
         System.out.println(characterIntegerHashMap);
     }
 
     public static void main(String[] args) {
-
         charFrequency();
-
         eachCharOccurrance();
 
-        String panNumber=CustomConstant.PAN;
-        boolean panMatches=validatePan(panNumber);
-        if (panMatches){
+        String panNumber = CustomConstant.PAN;
+        boolean panMatches = validatePan(panNumber);
+        if (panMatches) {
             System.out.println(CustomConstant.MSG_PAN_CORRECT);
-        }else {
+        } else {
             System.out.println(CustomConstant.MSG_PAN_NOT_CORRECT);
         }
 
@@ -83,7 +75,7 @@ public class JavaPrograms {
         //code riddle 3
         //compile time error
         //System.out.println("\u0022\u0029\u003B\u0077\u0068\u0069\u006C\u0065\u0028\u0074\u0072\u0075\u0065\u0029\u002F\u002F");
-                // System.out.println("\u004D\u0061\u0067\u0069\u0063\u0021");
+        // System.out.println("\u004D\u0061\u0067\u0069\u0063\u0021");
 
         //code riddle 4
         //will compile, but prints noting
