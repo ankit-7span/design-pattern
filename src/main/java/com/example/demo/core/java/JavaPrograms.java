@@ -2,7 +2,10 @@ package com.example.demo.core.java;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 public class JavaPrograms {
@@ -45,9 +48,55 @@ public class JavaPrograms {
         System.out.println(characterIntegerHashMap);
     }
 
+    public static String reverseString(String keyword) {
+        String reverse = "";
+        for (int i = keyword.length() - 1; i >= 0; i--) {
+            reverse = reverse + keyword.charAt(i);
+        }
+        return reverse;
+    }
+
+
+    List<Integer> integerList = removeDuplicateElementsFromArray();
+
+    public static List<Integer> removeDuplicateElementsFromArray() {
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(2);
+        Set<Integer> sets = new LinkedHashSet<>(list);
+        list.clear();
+        list.addAll(sets);
+        return list;
+    }
+
+    public static void findDuplicateCharInString(String keyword) {
+        char[] chars = keyword.toCharArray();
+        Map<Character, Integer> characterMap = new HashMap<>();
+        for (char aChar : chars) {
+            if (characterMap.containsKey(aChar)) {
+                characterMap.put(aChar,characterMap.get(aChar) + 1);
+            } else {
+                characterMap.put(aChar,1);
+            }
+        }
+
+        Set<Map.Entry<Character,Integer>> entries = characterMap.entrySet();
+        for (Map.Entry<Character,Integer> entry : entries) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + " : " + entry.getValue());
+            }
+        }
+    }
+
     public static void main(String[] args) {
+
+      /*
         charFrequency();
         eachCharOccurrance();
+        reverseString();
+        System.out.println(removeDuplicateElementsFromArray());
+        findDuplicateCharInString("aankit");
 
         String panNumber = CustomConstant.PAN;
         boolean panMatches = validatePan(panNumber);
@@ -55,7 +104,7 @@ public class JavaPrograms {
             System.out.println(CustomConstant.MSG_PAN_CORRECT);
         } else {
             System.out.println(CustomConstant.MSG_PAN_NOT_CORRECT);
-        }
+        }*/
 
         //code riddle 1
         /*List<String> strings = Arrays.asList("I", "heckin'", "love", "java");
@@ -108,4 +157,6 @@ public class JavaPrograms {
     private static boolean validatePan(String panNumber) {
         return Pattern.compile(CustomConstant.PAN_PATTERN).matcher(panNumber).matches();
     }
+
+
 }
